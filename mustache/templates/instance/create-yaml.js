@@ -39,7 +39,7 @@ module.exports = {
     let reExportContent = '';
 
     Contracts.forEach(({ address, name, network, amount, currency }) => {
-      if (address != null) {
+      if (network === env && address != null) {
         contractsToInstancesContent += `contractsToInstances.set("${address.toLowerCase()}",${space}//${space}${name}-${currency}-${amount}${newLine}${doubleSpace}"${currency}${'-'}${amount}"${newLine});${newLine}`;
       }
       if (network === env && reExportContent === '') {
