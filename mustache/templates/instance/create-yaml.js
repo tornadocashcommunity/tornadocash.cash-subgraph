@@ -41,6 +41,10 @@ module.exports = {
     Contracts.forEach(({ address, name, network, amount, currency }) => {
       if (network === env && address != null) {
         contractsToInstancesContent += `contractsToInstances.set("${address.toLowerCase()}",${space}//${space}${name}-${currency}-${amount}${newLine}${doubleSpace}"${currency}${'-'}${amount}"${newLine});${newLine}`;
+        contractsToInstancesContent += `contractsToInstances.set("0x${address
+          .replace('0x', '')
+          .toUpperCase()}",${space}//${space}${name}-${currency}-${amount}${newLine}${doubleSpace}"${currency}${'-'}${amount}"${newLine});${newLine}`;
+        contractsToInstancesContent += `contractsToInstances.set("${address}",${space}//${space}${name}-${currency}-${amount}${newLine}${doubleSpace}"${currency}${'-'}${amount}"${newLine});${newLine}`;
       }
       if (network === env) {
         reExportContent += `${readOnlyComment}${newLine}export * from "./${name}-${amount}-${currency}/Instance";${newLine}`;
