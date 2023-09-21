@@ -42,7 +42,7 @@ module.exports = {
       if (network === env && address != null) {
         contractsToInstancesContent += `contractsToInstances.set("${address.toLowerCase()}",${space}//${space}${name}-${currency}-${amount}${newLine}${doubleSpace}"${currency}${'-'}${amount}"${newLine});${newLine}`;
       }
-      if (network === env && reExportContent === '') {
+      if (network === env) {
         reExportContent += `${readOnlyComment}${newLine}export * from "./${name}-${amount}-${currency}/Instance";${newLine}`;
       }
     });
