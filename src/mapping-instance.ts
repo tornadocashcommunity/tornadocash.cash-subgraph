@@ -6,7 +6,7 @@ import { contractsToInstances } from './contractsToInstances';
 export function handleWithdrawal(event: Withdrawal): void {
   let entity = new WithdrawalEntity(event.transaction.hash.toHex() + '-' + event.logIndex.toString());
 
-  let result = contractsToInstances.get(`${event.address.toHexString()}`.toLowerCase()).split('-');
+  let result = contractsToInstances.get((`${event.address.toHexString()}` as any).toLowerCase()).split('-');
 
   entity.amount = result[1];
   entity.currency = result[0];
@@ -25,7 +25,7 @@ export function handleWithdrawal(event: Withdrawal): void {
 export function handleDeposit(event: Deposit): void {
   let entity = new DepositEntity(event.transaction.hash.toHex() + '-' + event.logIndex.toString());
 
-  let result = contractsToInstances.get(`${event.address.toHexString()}`.toLowerCase()).split('-');
+  let result = contractsToInstances.get((`${event.address.toHexString()}` as any).toLowerCase()).split('-');
 
   entity.amount = result[1];
   entity.currency = result[0];
