@@ -65,5 +65,4 @@ build
 .idea
 .env
 
-generated
 .DS_Store

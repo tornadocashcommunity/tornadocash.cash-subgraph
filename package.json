@@ -3,6 +3,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint .",
+    "generate": "yarn generate-bsc && yarn generate-xdai && yarn generate-matic && yarn generate-mainnet && yarn generate-goerli && yarn generate-avalanche && yarn generate-arbitrum && yarn generate-optimism",
     "generate-bsc": "yarn codegen:tornado-bsc && yarn build:tornado-bsc",
     "generate-xdai": "yarn codegen:tornado-xdai && yarn build:tornado-xdai",
     "generate-matic": "yarn codegen:tornado-matic && yarn build:tornado-matic",
@@ -37,7 +38,8 @@
     "build:tornado-avalanche": "graph build subgraphs/tornado-subgraph-avalanche.yaml",
     "build:tornado-arbitrum": "graph build subgraphs/tornado-subgraph-arbitrum.yaml",
     "build:tornado-optimism": "graph build subgraphs/tornado-subgraph-optimism.yaml",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ --access-token $TOKEN",
+    "deploy": "graph deploy --node http://127.0.0.1:8020/ --ipfs http://127.0.0.1:5001/",
+    "deploy:all": "yarn deploy:tornado-bsc && yarn deploy:tornado-xdai && yarn deploy:tornado-matic && yarn deploy:tornado-mainnet && yarn deploy:tornado-avalanche && yarn deploy:tornado-arbitrum && yarn deploy:tornado-optimism",
     "deploy:tornado-bsc": "yarn deploy -- tornadocash/bsc-tornado-subgraph subgraphs/tornado-subgraph-bsc.yaml",
     "deploy:tornado-xdai": "yarn deploy -- tornadocash/xdai-tornado-subgraph subgraphs/tornado-subgraph-xdai.yaml",
     "deploy:tornado-matic": "yarn deploy -- tornadocash/matic-tornado-subgraph subgraphs/tornado-subgraph-matic.yaml",

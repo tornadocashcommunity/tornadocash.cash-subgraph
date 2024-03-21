@@ -205,15 +205,16 @@ To deploy the Ethereum Mainnet subgraph:
 Now navigate to this repository (tornado-subgraph) and run the following commands:
 
 ```bash
-yarn
+# Create all necessary files for subgraph deployment
+yarn && yarn generate
 
-yarn codegen:tornado-mainnet
+# Deploy subgraph on Ethereum Mainnet
+yarn deploy:tornado-mainnet
+# Deploy subgraph on BNB Chain
+yarn deploy:tornado-bsc
 
-yarn build:tornado-mainnet
-
-npx graph create tornadocash/tornado-subgraph --node http://127.0.0.1:8020
-
-npx graph deploy tornadocash/tornado-subgraph --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020/ subgraphs/tornado-subgraph-mainnet.yaml
+# Can deploy all at once if you have all necessary node connections
+yarn deploy:all
 ```
 
 You might see some issues about non-existing directories like `build/` or `generated/` the first time you deploy the subgraph. If you do, simply create the directory and re-run the command that failed.
