@@ -209,12 +209,12 @@ Now navigate to this repository (tornado-subgraph) and run the following command
 yarn && yarn generate
 
 # Deploy subgraph on Ethereum Mainnet
-yarn deploy:tornado-mainnet
+yarn create:tornado-mainnet && yarn deploy:tornado-mainnet
 # Deploy subgraph on BNB Chain
-yarn deploy:tornado-bsc
+yarn create:tornado-bsc && yarn deploy:tornado-bsc
 
 # Can deploy all at once if you have all necessary node connections
-yarn deploy:all
+yarn create:all && yarn deploy:all
 ```
 
 You might see some issues about non-existing directories like `build/` or `generated/` the first time you deploy the subgraph. If you do, simply create the directory and re-run the command that failed.
