@@ -56,6 +56,7 @@ services:
       - GRAPH_NODE_CONFIG=/custom-config.toml
       - node_id=primary_node
       - GRAPH_ETHEREUM_CLEANUP_BLOCKS=true
+      - API_KEY=API_KEY_HERE
     restart: unless-stopped
     ports:
       - '8000:8000'
@@ -152,37 +153,37 @@ ingestor = "primary_node"
 [chains.mainnet]
 shard = "primary"
 provider = [
-    { label = "mainnet", transport = "rpc", url = "https://mainnet.chainnodes.org/API_KEY", features = ["traces", "archive"] }
+    { label = "mainnet", transport = "rpc", url = "https://mainnet.chainnodes.org/${API_KEY}", features = ["traces", "archive"] }
 ]
-[chains.polygon]
+[chains.matic]
 shard = "primary"
 provider = [
-    { label = "polygon", transport = "rpc", url = "https://polygon-mainnet.chainnodes.org/API_KEY", features = ["traces", "archive"] }
+    { label = "matic", transport = "rpc", url = "https://polygon-mainnet.chainnodes.org/${API_KEY}", features = ["traces", "archive"] }
 ]
 [chains.bsc]
 shard = "primary"
 provider = [
-    { label = "bsc", transport = "rpc", url = "https://bsc-mainnet.chainnodes.org/API_KEY", features = ["traces", "archive"] }
+    { label = "bsc", transport = "rpc", url = "https://bsc-mainnet.chainnodes.org/${API_KEY}", features = ["traces", "archive"] }
 ]
-[chains.gnosis]
+[chains.xdai]
 shard = "primary"
 provider = [
-    { label = "gnosis", transport = "rpc", url = "https://gnosis-mainnet.chainnodes.org/API_KEY", features = ["traces", "archive"] }
+    { label = "xdai", transport = "rpc", url = "https://gnosis-mainnet.chainnodes.org/${API_KEY}", features = ["traces", "archive"] }
 ]
 [chains.goerli]
 shard = "primary"
 provider = [
-    { label = "goerli", transport = "rpc", url = "https://goerli.chainnodes.org/API_KEY", features = ["traces", "archive"] }
+    { label = "goerli", transport = "rpc", url = "https://goerli.chainnodes.org/${API_KEY}", features = ["traces", "archive"] }
 ]
 [chains.arbitrum-one]
 shard = "primary"
 provider = [
-    { label = "arbitrum-one", transport = "rpc", url = "https://arbitrum-one.chainnodes.org/API_KEY", features = ["traces", "archive"] }
+    { label = "arbitrum-one", transport = "rpc", url = "https://arbitrum-one.chainnodes.org/${API_KEY}", features = ["traces", "archive"] }
 ]
 [chains.optimism]
 shard = "primary"
 provider = [
-    { label = "optimism", transport = "rpc", url = "https://optimism-mainnet.chainnodes.org/API_KEY", features = ["traces", "archive"] }
+    { label = "optimism", transport = "rpc", url = "https://optimism-mainnet.chainnodes.org/${API_KEY}", features = ["traces", "archive"] }
 ]
 
 [deployment]
