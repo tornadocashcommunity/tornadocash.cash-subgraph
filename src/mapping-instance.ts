@@ -1,3 +1,4 @@
+import { dataSource } from "@graphprotocol/graph-ts";
 import { Withdrawal, Deposit } from '../generated';
 import { Withdrawal as WithdrawalEntity, Deposit as DepositEntity } from '../generated/schema';
 
@@ -6,7 +7,7 @@ import { contractsToInstances } from './contractsToInstances';
 export function handleWithdrawal(event: Withdrawal): void {
   let entity = new WithdrawalEntity(event.transaction.hash.toHex() + '-' + event.logIndex.toString());
 
-  let result = contractsToInstances.get(event.address.toHexString()).split('-');
+  let result = contractsToInstances.get(event.address.toHexString() + '_' + dataSource.network()).split('-');
 
   entity.amount = result[1];
   entity.currency = result[0];
@@ -25,7 +26,7 @@ export function handleWithdrawal(event: Withdrawal): void {
 export function handleDeposit(event: Deposit): void {
   let entity = new DepositEntity(event.transaction.hash.toHex() + '-' + event.logIndex.toString());
 
-  let result = contractsToInstances.get(event.address.toHexString()).split('-');
+  let result = contractsToInstances.get(event.address.toHexString() + '_' + dataSource.network()).split('-');
 
   entity.amount = result[1];
   entity.currency = result[0];

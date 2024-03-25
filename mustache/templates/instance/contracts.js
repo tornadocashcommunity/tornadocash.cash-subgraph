@@ -1,5 +1,5 @@
 const deployedBlocks = {
-  bsc: 8159290,
+  bsc: 8158799,
   xdai: 17754561,
   matic: 16257962,
   goerli: 3781595,

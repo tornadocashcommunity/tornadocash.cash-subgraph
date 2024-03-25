@@ -10,7 +10,7 @@
     source:
       address: "0xa75BF2815618872f155b7C4B0C81bF990f5245E4"
       abi: Echoer
-      startBlock: 8159269
+      startBlock: 8158799
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -30,7 +30,7 @@
     source:
       address: "0x84443CFd09A48AF6eF360C6976C5392aC5023a1F"
       abi: Instance
-      startBlock: 8159279
+      startBlock: 8158799
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -53,7 +53,7 @@
     source:
       address: "0xd47438C816c9E7f2E2888E060936a499Af9582b3"
       abi: Instance
-      startBlock: 8159286
+      startBlock: 8158799
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -76,7 +76,7 @@
     source:
       address: "0x330bdFADE01eE9bF63C209Ee33102DD334618e0a"
       abi: Instance
-      startBlock: 8159290
+      startBlock: 8158799
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -99,7 +99,7 @@
     source:
       address: "0x1E34A77868E19A6647b1f2F47B51ed72dEDE95DD"
       abi: Instance
-      startBlock: 8159296
+      startBlock: 8158799
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
