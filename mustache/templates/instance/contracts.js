@@ -7,7 +7,7 @@ const deployedBlocks = {
   optimism: 2243689,
   arbitrum: 3430648,
   avalanche: 4429818,
-  sepolia: 5590273,
+  sepolia: 5594395,
 };
 
 const contracts = [
@@ -505,7 +505,7 @@ const contracts = [
     network: 'sepolia',
     currency: 'eth',
     name: 'Instance',
-    address: '0x44ddE10DeEacD8B91799ff02E4493749dDD320d8',
+    address: '0x8C4A04d872a6C1BE37964A21ba3a138525dFF50b',
   },
   {
     prod: deployedBlocks.sepolia,
@@ -513,7 +513,7 @@ const contracts = [
     network: 'sepolia',
     currency: 'eth',
     name: 'Instance',
-    address: '0x2365a6BfFbaB6f18EFb9228f394a6aaEEf3F24bc',
+    address: '0x8cc930096B4Df705A007c4A039BDFA1320Ed2508',
   },
   {
     prod: deployedBlocks.sepolia,
@@ -521,7 +521,7 @@ const contracts = [
     network: 'sepolia',
     currency: 'eth',
     name: 'Instance',
-    address: '0x3a28921a352D4D8e5A500Ed4a3EECfD6e641C783',
+    address: '0x8D10d506D29Fc62ABb8A290B99F66dB27Fc43585',
   },
   {
     prod: deployedBlocks.sepolia,
@@ -529,7 +529,7 @@ const contracts = [
     network: 'sepolia',
     currency: 'eth',
     name: 'Instance',
-    address: '0x38305EE06D4D89ADb911C603D0df34DE4aE2bFa7',
+    address: '0x44c5C92ed73dB43888210264f0C8b36Fd68D8379',
   },
   {
     prod: deployedBlocks.sepolia,
@@ -537,7 +537,7 @@ const contracts = [
     network: 'sepolia',
     currency: 'dai',
     name: 'Instance',
-    address: '0x6B9A18d1C227a4972bB6512fB8587d12A1356027',
+    address: '0x6921fd1a97441dd603a997ED6DDF388658daf754',
   },
   {
     prod: deployedBlocks.sepolia,
@@ -545,7 +545,7 @@ const contracts = [
     network: 'sepolia',
     currency: 'dai',
     name: 'Instance',
-    address: '0x68DAD9C7BfFe61B44446d894a352E10416c47AfA',
+    address: '0x50a637770F5d161999420F7d70d888DE47207145',
   },
   {
     prod: deployedBlocks.sepolia,
@@ -553,7 +553,7 @@ const contracts = [
     network: 'sepolia',
     currency: 'dai',
     name: 'Instance',
-    address: '0xB62F3D4ADe05AB395aBBccAA8F45A2A386C67396',
+    address: '0xecD649870407cD43923A816Cc6334a5bdf113621',
   },
   {
     prod: deployedBlocks.sepolia,
@@ -561,7 +561,7 @@ const contracts = [
     network: 'sepolia',
     currency: 'dai',
     name: 'Instance',
-    address: '0xEDFe671616d42F98E78Afabb6907b9E37d1eD900',
+    address: '0x73B4BD04bF83206B6e979BE2507098F92EDf4F90',
   },
 ];
 
