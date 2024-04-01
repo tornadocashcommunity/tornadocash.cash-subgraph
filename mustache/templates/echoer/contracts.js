@@ -47,6 +47,12 @@ const contracts = [
     name: 'Echoer',
     address: '0xa75BF2815618872f155b7C4B0C81bF990f5245E4',
   },
+  {
+    prod: 5594395,
+    network: 'sepolia',
+    name: 'Echoer',
+    address: '0xcDD1fc3F5ac2782D83449d3AbE80D6b7B273B0e5',
+  },
 ];
 
 module.exports = contracts;

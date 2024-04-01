@@ -5,6 +5,26 @@
     file: ../schema.graphql
   dataSources:
   - kind: ethereum/contract
+    name: Echoer
+    network: sepolia
+    source:
+      address: "0xcDD1fc3F5ac2782D83449d3AbE80D6b7B273B0e5"
+      abi: Echoer
+      startBlock: 5594395
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ../src/mapping-echo-account.ts
+      entities:
+        - NoteAccount
+      abis:
+        - name: Echoer
+          file: ../abis/Echoer.json
+      eventHandlers:
+        - event: Echo(indexed address,bytes)
+          handler: handleEcho
+  - kind: ethereum/contract
     name: Instance-0.1-eth
     network: sepolia
     source:
@@ -188,3 +208,23 @@
           handler: handleDeposit
         - event: Withdrawal(address,bytes32,indexed address,uint256)
           handler: handleWithdrawal
+  - kind: ethereum/contract
+    name: Proxy
+    network: sepolia
+    source:
+      address: "0x1572AFE6949fdF51Cb3E0856216670ae9Ee160Ee"
+      abi: Proxy
+      startBlock: 5594395
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ../src/mapping-encrypted-note.ts
+      entities:
+        - EncryptedNote
+      abis:
+        - name: Proxy
+          file: ../abis/Proxy.json
+      eventHandlers:
+        - event: EncryptedNote(indexed address,bytes)
+          handler: handleEncryptedNote

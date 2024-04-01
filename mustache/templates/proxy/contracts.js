@@ -47,6 +47,12 @@ const contracts = [
     network: 'optimism',
     address: '0x0D5550d52428E7e3175bfc9550207e4ad3859b17',
   },
+  {
+    prod: 5594395,
+    name: 'Proxy',
+    network: 'sepolia',
+    address: '0x1572AFE6949fdF51Cb3E0856216670ae9Ee160Ee',
+  },
 ];
 
 module.exports = contracts;
