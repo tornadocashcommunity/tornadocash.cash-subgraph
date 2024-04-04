@@ -5,6 +5,7 @@ export function handleEcho(event: Echo): void {
   let entity = new NoteAccountEntity(event.transaction.hash.toHex() + '-' + event.logIndex.toString());
 
   entity.index = event.logIndex;
+  entity.blockNumber = event.block.number;
   entity.address = event.params.who;
   entity.encryptedAccount = event.params.data;
 

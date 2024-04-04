@@ -34,6 +34,7 @@ type EncryptedNote @entity {
 type NoteAccount @entity {
   id: ID!
   index: BigInt!
+  blockNumber: BigInt!
   address: Bytes!
   encryptedAccount: Bytes!
 }
