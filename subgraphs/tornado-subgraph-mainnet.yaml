@@ -462,6 +462,46 @@
         - event: Withdrawal(address,bytes32,indexed address,uint256)
           handler: handleWithdrawal
   - kind: ethereum/contract
+    name: Proxy-old1
+    network: mainnet
+    source:
+      address: "0x722122dF12D4e14e13Ac3b6895a86e84145b6967"
+      abi: Proxy
+      startBlock: 12143762
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ../src/mapping-encrypted-note.ts
+      entities:
+        - EncryptedNote
+      abis:
+        - name: Proxy
+          file: ../abis/Proxy.json
+      eventHandlers:
+        - event: EncryptedNote(indexed address,bytes)
+          handler: handleEncryptedNote
+  - kind: ethereum/contract
+    name: Proxy-old2
+    network: mainnet
+    source:
+      address: "0x00fce327a1c64b24a626c353e68222275d184c40"
+      abi: Proxy
+      startBlock: 15402258
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ../src/mapping-encrypted-note.ts
+      entities:
+        - EncryptedNote
+      abis:
+        - name: Proxy
+          file: ../abis/Proxy.json
+      eventHandlers:
+        - event: EncryptedNote(indexed address,bytes)
+          handler: handleEncryptedNote
+  - kind: ethereum/contract
     name: Proxy
     network: mainnet
     source:

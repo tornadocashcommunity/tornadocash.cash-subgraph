@@ -12,7 +12,7 @@ module.exports = {
       entities: ['EncryptedNote'],
       abis: [
         {
-          event: 'Proxy',
+          name: 'Proxy',
           path: '../abis/Proxy.json',
         },
       ],

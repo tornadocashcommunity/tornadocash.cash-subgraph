@@ -18,6 +18,18 @@ const contracts = [
     address: '0x0D5550d52428E7e3175bfc9550207e4ad3859b17',
   },
   {
+    prod: 12143762,
+    name: 'Proxy-old1',
+    network: 'mainnet',
+    address: '0x722122dF12D4e14e13Ac3b6895a86e84145b6967',
+  },
+  {
+    prod: 15402258,
+    name: 'Proxy-old2',
+    network: 'mainnet',
+    address: '0x00fce327a1c64b24a626c353e68222275d184c40',
+  },
+  {
     prod: 14248730,
     name: 'Proxy',
     network: 'mainnet',
